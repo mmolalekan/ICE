@@ -13,23 +13,28 @@ const Services = () => {
   const services = [
     {
       icon: faCog,
-      title: "Project Management",
-      story: "We are available to assist clients achieve their desired construction goals by working with them through the planning, design and execution of construction of projects."
+      title: "Seamless Project Management",
+      story: "Turn your vision into reality, on time and within budget. Our project management experts oversee every detail, from planning and coordination to resource allocation and execution."
     },
     {
       icon: faCompassDrafting,
-      title: "Structural Design",
-      story: "We are available to assist clients achieve their desired construction goals by working with them through the planning, design and execution of construction of projects."
-    },
-    {
-      icon: faHouse,
-      title: "Real Estate",
-      story: "We are available to assist clients achieve their desired construction goals by working with them through the planning, design and execution of construction of projects."
+      title: "Design & Modernization",
+      story: " Create structures that stand the test of time. We specialize in designing new buildings and revitalizing existing ones, ensuring safety, efficiency, and sustainability are at the core of every project."
     },
     {
       icon: faHammer,
-      title: "Design & Modifications",
-      story: "We are available to assist clients achieve their desired construction goals by working with them through the planning, design and execution of construction of projects."
+      title: "Expert Consultancy",
+      story: "Navigate your projects with confidence. Our seasoned team offers strategic guidance, feasibility studies, and innovative solutions tailored to your specific challenges and goals."
+    },
+    {
+      icon: faHammer,
+      title: "Independent Third-Party Inspection",
+      story: "Gain peace of mind with our unbiased assessments. We ensure your projects meet or exceed industry standards and regulatory requirements, providing you with detailed reports and actionable recommendations."
+    },
+    {
+      icon: faHouse,
+      title: "Maximize Your Real Estate Potential",
+      story: "Unlock the full value of your properties. Our real estate services encompass development, management, and investment consulting, ensuring you achieve optimal returns and sustainable growth."
     },
   ];
 

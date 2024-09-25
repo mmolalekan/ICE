@@ -23,43 +23,48 @@ import CompanyProfile from "../docs/IC Engineering Content.pdf";
 
 const Home = () => {
 
-  const paragraph = "For 30 years, IC Engineering Inc. has led with innovation and quality across energy, technology, and real estate sectors. We are dedicated to delivering cutting-edge, sustainable solutions while maintaining our legacy of engineering excellence.";
-  const tagline = "30 Years of Engineering Excellence";
+  const hero = {
+    tagline: "Engineering a Sustainable Future, Together",
+    paragraph: "For 30 years, IC Engineering Inc. has led with innovation and quality across energy, technology, and real estate sectors. We are dedicated to delivering cutting-edge, sustainable solutions while maintaining our legacy of engineering excellence."
+  }
 
-  const services = [
-    { icon: faCog, title: "Project Management" },
-    { icon: faCompassDrafting, title: "Structural Design" },
-    { icon: faHouse, title: "Real Estate" },
-    { icon: faHammer, title: "Design & Modifications" },
-  ];
+  const about = {
+    heading: "A Legacy of Innovation & Client Success",
+    body: "For three decades, IC Engineering Inc. has been a trusted partner, delivering innovative, high-quality, and client-centric solutions. Our unwavering commitment to excellence and a future-focused mindset have established us as industry leaders.",
+    button: "Read more",
+    link: "/about"
+  }
 
-  const projects = [
-    {
-      image: ProjectManagement,
-      type: "Project Management",
-      description: "The Layhill development is set on a 14-acre site at 5429 Yates Mill Pond Rd., Raleigh, NC. The land, divided by a creek and governed by the Swift Creek Land Management Plan, offers 35% usable area, accommodating the construction of four estate-type houses."
-    },
-    {
-      image: Structural,
-      type: "Structural Engineering",
-      description: "The Layhill development is set on a 14-acre site at 5429 Yates Mill Pond Rd., Raleigh, NC. The land, divided by a creek and governed by the Swift Creek Land Management Plan, offers 35% usable area, accommodating the construction of four estate-type houses."
-    },
-    {
-      image: RealEstate,
-      type: "Real Estate",
-      description: "The Layhill development is set on a 14-acre site at 5429 Yates Mill Pond Rd., Raleigh, NC. The land, divided by a creek and governed by the Swift Creek Land Management Plan, offers 35% usable area, accommodating the construction of four estate-type houses."
-    },
-    {
-      image: RealEstate2,
-      type: "Real Estate",
-      description: "The Layhill development is set on a 14-acre site at 5429 Yates Mill Pond Rd., Raleigh, NC. The land, divided by a creek and governed by the Swift Creek Land Management Plan, offers 35% usable area, accommodating the construction of four estate-type houses."
-    },
-    {
-      image: Modification,
-      type: "Modification and Renovation",
-      description: "The Layhill development is set on a 14-acre site at 5429 Yates Mill Pond Rd., Raleigh, NC. The land, divided by a creek and governed by the Swift Creek Land Management Plan, offers 35% usable area, accommodating the construction of four estate-type houses."
-    },
-  ];
+  const services = {
+    heading: "Services",
+    button: "View all services",
+    link: "/services",
+    services: [
+      { icon: faCog, title: "Project Management" },
+      { icon: faCompassDrafting, title: "Structural Design" },
+      { icon: faHouse, title: "Real Estate" },
+      { icon: faHammer, title: "Design & Modifications" }
+    ]
+
+  };
+
+  const projects = {
+    heading: "Projects",
+    button: "View all projects",
+    link: "/projects",
+    projects: [
+      {
+        image: ProjectManagement,
+        type: "Project Management",
+        description: "The Layhill development is set on a 14-acre site at 5429 Yates Mill Pond Rd., Raleigh, NC. The land, divided by a creek and governed by the Swift Creek Land Management Plan, offers 35% usable area, accommodating the construction of four estate-type houses."
+      },
+      {
+        image: Structural,
+        type: "Structural Engineering",
+        description: "The Bryarton development is set on a 14-acre site at 5429 Yates Mill Pond Rd., Raleigh, NC. The land, divided by a creek and governed by the Swift Creek Land Management Plan, offers 35% usable area, accommodating the construction of four estate-type houses."
+      }
+    ]
+  };
 
   const testimonials = [
     {
@@ -99,6 +104,13 @@ const Home = () => {
     }
   ];
 
+  const contact = {
+    heading: "Partner with IC Engineering",
+    body: "We always take pride in quality over quantity and built the company slowly so we could earn a reputation for good work.",
+    text: "Call now",
+    link: "/contact"
+  }
+
   return (
     <div>
       <Navbar />
@@ -106,8 +118,8 @@ const Home = () => {
       {/* Intro */}
       <section className="relative">
         <img src={Banner} alt="banner" className="inset-0 w-full h-[480px] md:h-[720px] object-cover" />
-        <p className="inline-block text-sm font-extrabold leading-loose md:text-2xl text-black absolute top-5 left-5 bg-opacity-10 bg-gradient-to-b from-cyan via-transparent to-black/50 rounded-3xl p-4 text-justify">
-          {/* {displayedText} */}{tagline}
+        <p className="inline-block text-sm font-extrabold leading-loose md:text-2xl text-black absolute top-5 left-5 bg-opacity-10 bg-gradient-to-b from-cyan via-transparent to-black/50 rounded-3xl p-4">
+          {/* {displayedText} */}{hero.tagline}
         </p>
       </section>
 
@@ -116,10 +128,10 @@ const Home = () => {
         <div className="flex flex-col-reverse md:flex-row-reverse justify-center items-center gap-10">
           <img src={Description} alt="About IC Engineering" className="rounded-3xl inset-0 w-full md:w-1/2 object-cover h-[480px]" />
           <div className="flex flex-col gap-8 md:gap-12 justify-center items-center">
-            <h2 className="text-black text-2xl font-extrabold uppercase">About IC Engineering</h2>
-            <p className="w-full md:w-full text-[18px] font-sans text-justify text-cyan md:leading-relaxed md:text-[24px]">{paragraph}</p>
+            <Heading heading={about.heading} />
+            <p className="w-full md:w-full text-[18px] font-sans text-justify text-cyan md:leading-relaxed md:text-[24px]">{about.body}</p>
             {/* <hr className="border-l-1 border-slate-700" /> */}
-            <Link to="/about" className="uppercase bg-black text-white py-2 px-5 rounded-full w-1/2 text-center">Read more</Link>
+            <Button text={about.button} link={about.link} />
           </div>
         </div>
 
@@ -137,9 +149,9 @@ const Home = () => {
 
         {/* Services */}
         <section className="flex flex-col justify-center items-center gap-10">
-          <h2 className="text-black text-2xl font-extrabold uppercase">Services</h2>
+          <Heading heading={services.heading} />
           <div className="w-full flex flex-wrap justify-center items-center gap-10">
-            {services.map((service, index) => (
+            {services.services.map((service, index) => (
               <div key={index} className="flex h-72 w-72 flex-col justify-center items-center border-2 rounded-3xl gap-10">
                 <div className="bg-cyan rounded-full p-4">
                   <FontAwesomeIcon icon={service.icon} size="4x" className="text-white" />
@@ -148,24 +160,26 @@ const Home = () => {
               </div>
             ))}
           </div>
-          <Link to="/services" className="uppercase bg-black text-white py-2 px-5 rounded-full w-72 text-center">View all services</Link>
+          <Button text={services.button} link={services.link} />
         </section>
 
         {/* Projects */}
         <section className="flex flex-col justify-center items-center gap-10">
-          <h2 className="text-black text-2xl font-extrabold uppercase">Projects</h2>
-          <div className="flex flex-wrap gap-8 justify-center">
-            {projects.map((project, index) => (
-              <div key={index} className="flex flex-col justify-center items-center w-96 border-double border-4 rounded-4xl p-5 gap-5 bg-cyan">
+          <h2 className="text-black text-2xl font-extrabold uppercase">{projects.heading}</h2>
+          <div className="flex flex-row flex-wrap gap-8 justify-center">
+            {projects.projects.map((project, index) => (
+              <div key={index} className="relative flex flex-col justify-center items-center rounded-4xl gap-5 bg-cyan max-w-[350px]">
                 <h3 className="text-xl font-bold font-merriweather py-2 text-white text-center">
                   <span className="font-inter text-slate-400 font-thin">Category: </span>
-                  <br />{project.type}</h3>
-                <img src={project.image} alt={project.type} className="inset-0 w-full h-full object-cover aspect-w-16 aspect-h-9" />
-                <p className="text-justify text-white text-xl font-extralight">{project.description}</p>
+                  <br />
+                  {project.type}
+                </h3>
+                <img src={project.image} alt={project.type} className="inset-0 h-[450px] object-cover" />
+                <p className="absolute bottom-0 p-5 text-white/50 hover:text-white hover:bg-black/80 font-light">{project.description}</p>
               </div>
             ))}
           </div>
-          <Link to="#" className="uppercase bg-black text-white py-2 px-5 rounded-full w-72 text-center">View more projects</Link>
+          <Button text={projects.button} link={projects.link} />
         </section >
       </div>
 
@@ -198,9 +212,13 @@ const Home = () => {
       <section className="relative">
         <img src={Contact} alt="banner" className="inset-0 w-full h-[480px] object-cover" />
         <div className="absolute text-white w-1/2 md:w-1/2 top-10 py-10 left-10 bg-gradient-to-b from-transparent via-black to-transparent px-4 flex flex-col gap-7">
-          <h1 className="text-[10px] md:text-xl font-semibold">IC Engineering Inc.</h1>
-          <p className="text-[10px] md:text-xl italic font-light">We always take pride in quality over quantity and built the company slowly so we could earn a reputation for good work.</p>
-          <Link to="/contact" className="text-[10px] md:text-xl uppercase bg-white hover:bg-black hover:text-white text-black py-2 px-2 rounded-full w-1/2 text-center">Call now</Link>
+          <h1 className="text-[10px] md:text-xl font-semibold">{contact.heading}</h1>
+          <p className="text-[10px] md:text-xl italic font-light">{contact.body}</p>
+          <Link to={contact.link}
+            className="text-[10px] md:text-xl uppercase bg-white hover:bg-black hover:text-white text-black py-2 px-2 rounded-full w-1/2 text-center"
+          >
+            {contact.text}
+          </Link>
         </div>
       </section>
 
@@ -210,3 +228,16 @@ const Home = () => {
 }
 
 export default Home;
+
+
+const Heading = ({ heading }) => {
+  return (
+    <h2 className="text-black text-2xl font-extrabold uppercase">{heading}</h2>
+  );
+}
+
+const Button = ({ text, link }) => {
+  return (
+    <Link to={link} className="uppercase bg-black text-white py-2 px-5 rounded-full max-w-72 min-w-64 text-center">{text}</Link>
+  );
+}

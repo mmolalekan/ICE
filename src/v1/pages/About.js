@@ -33,19 +33,19 @@ const About = () => {
       text: "Our Mission",
       function: actiVateMissionTab,
       status: mission,
-      writeUp: "To deploy optimal integrated engineering solutions to achieving timely, qualitative and cost-effective Infrastructural Planning, Design and Management for Public and Private sectors of the economy."
+      writeUp: "To deploy optimal integrated engineering solutions that achieve timely, high-quality, and cost-effective infrastructure planning, design, and management for both public and private sectors."
     },
     {
       text: "Our Vision",
       function: actiVateVisionTab,
       status: vision,
-      writeUp: "IC Engineering Inc. aspires to be a state-of-the-art Engineering global outfit of first choice upholding international best practices for infrastructural service delivery."
+      writeUp: "IC Engineering Inc. aspires to be a globally recognized, state-of-the-art engineering firm, setting the standard for international best practices in infrastructure service delivery."
     },
     {
       text: "Our Values",
       function: actiVateValuesTab,
       status: values,
-      writeUp: "At IC Engineering, our foundation is built on core values of honesty, integrity, and client satisfaction. These principles are at the heart of our Business Principles, guiding our responsibilities to shareholders, customers, employees, business partners, and society at large. Complemented by our Professional Code of Conduct, they shape how we deliver excellence in every project we undertake."
+      writeUp: "Honesty, integrity, and client satisfaction are the cornerstones of IC Engineering's culture."
     }
   ]
 
